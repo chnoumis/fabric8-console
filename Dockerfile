@@ -2,7 +2,7 @@ FROM centos:centos7
 MAINTAINER Jimmi Dyson <jimmidyson@gmail.com>
 ENTRYPOINT ["/kuisp"]
 
-ENV OAUTH_PROVIDER openshift
+ENV OAUTH_PROVIDER google
 
 ENV KUISP_VERSION 0.10
 

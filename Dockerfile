@@ -14,7 +14,10 @@ RUN yum install -y tar && \
     curl -L https://github.com/jimmidyson/kuisp/releases/download/v${KUISP_VERSION}/kuisp-${KUISP_VERSION}-linux-amd64.tar.gz | \
       tar xzv
 
-COPY site /site/
+RUN mkdir /site
+
+COPY osconsole /site/osconsole
+COPY apiman /site/apiman
 RUN chmod -R 777 /site/osconsole/ /site/apiman/
 
 WORKDIR /site/
